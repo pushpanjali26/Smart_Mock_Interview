@@ -1,0 +1,203 @@
+body {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #f8f9fa, #e5e5f7);
+    color: #333;
+    box-sizing: border-box;
+}
+
+.main {
+    height:93vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px 40px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4f46e5;
+}
+
+.signupButton {
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.signupButton:hover {
+    background-color: #3730a3;
+}
+
+/* Content Section */
+.content {
+    display: flex;
+    flex-direction: column-reverse;
+    /* For smaller screens, text will appear first */
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 50px auto;
+    gap: 30px;
+    /* Adds spacing between text and image */
+}
+
+@media (min-width: 768px) {
+    .content {
+        flex-direction: row;
+        /* Side-by-side for larger screens */
+    }
+}
+
+.textContainer {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    /* Center-align text for smaller screens */
+}
+
+@media (min-width: 768px) {
+    .textContainer {
+        text-align: left;
+        /* Left-align text for larger screens */
+    }
+}
+
+.title {
+    font-size: 2rem;
+    /* Responsive font size */
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .title {
+        font-size: 3rem;
+    }
+}
+
+.description {
+    font-size: 1rem;
+    /* Smaller font for small screens */
+    margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+    .description {
+        font-size: 1.2rem;
+    }
+}
+
+.ctaButton {
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.ctaButton:hover {
+    background-color: #3730a3;
+}
+
+/* Image Section */
+.imageContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    /* Make image fit smaller screens */
+}
+
+@media (min-width: 768px) {
+    .imageContainer {
+        max-width: 500px;
+    }
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    /* Make image responsive */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.interviewImage {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.textOverlay {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    font-size: 0.9rem;
+    color: #333;
+    max-width: 300px;
+    text-align: center;
+}
+
+/* Responsive Adjustments for Small Screens */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 10px;
+        /* Adds spacing between logo and button */
+    }
+
+    .signupButton {
+        width: 100%;
+        /* Button stretches full width */
+        text-align: center;
+    }
+
+    .ctaButton {
+        width: 100%;
+        /* CTA button stretches full width */
+    }
+
+    .content {
+        gap: 20px;
+        /* Adds spacing for smaller screens */
+    }
+
+    .title {
+        font-size: 2rem;
+        /* Smaller font size for headings */
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+}
